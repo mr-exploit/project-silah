@@ -44,7 +44,7 @@ app.use(session({
 
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:3000'
+    origin: 'https://silah-web.vercel.app/'
 }));
 
 app.use(express.json());
