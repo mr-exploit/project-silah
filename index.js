@@ -59,6 +59,6 @@ app.use(PerbaikanRoute);
 app.use(PerbaikanValidasiRoute);
 // store.sync();
 
-app.listen( () => {
+app.listen(process.env.APP_PORT, () => {
     console.log('Server Up and Running...');
 });
