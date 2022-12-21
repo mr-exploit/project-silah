@@ -10,7 +10,7 @@ import { verifyUser } from "../middleware/AuthUser.js";
 
 const router = express.Router();
 
-router.get('/datasekolah',  getDataSekolah);
+router.get('/datasekolah',  verifyUser, getDataSekolah);
 router.get('/datasekolah/:id', getDataSekolahById);
 router.post('/datasekolah', verifyUser, createDataSekolah);
 router.patch('/datasekolah/:id', verifyUser, updateDataSekolah);
