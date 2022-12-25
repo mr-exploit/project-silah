@@ -44,7 +44,7 @@ app.use(session({
 
 app.use(cors({
     credentials: true,
-    origin: true
+    origin: "http://13.213.44.30:3000"
 }));
 
 app.use(express.json());
