@@ -1,5 +1,6 @@
 import User from "../models/UserModel.js";
-// import argon2 from "argon2";
+// import argon2 = require("argon2")
+const argon2 = require("argon2");
 
 export const getUsers = async (req, res) => {
     try {
@@ -43,12 +44,12 @@ export const createUser = async (req, res) => {
             .json({
                 msg: "Password dan Confirm password tidak cocok!"
             });
-    // const hashPassword = await argon2.hash(password);
+    const hashPassword = await argon2.hash(password);
     try {
         await User.create({
             name: name,
             email: email,
-            password: password,
+            password: hashPassword,
             role: role
         });
         res.status(201).json({
