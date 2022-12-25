@@ -1,5 +1,6 @@
 import User from "../models/UserModel.js";
-const argon2 = require("argon2");
+// import argon2 from "argon2";
+import argon2 from "moduls/argon2";
 
 export const Login = async(req, res) => {
     const user = await User.findOne({
