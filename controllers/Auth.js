@@ -1,6 +1,6 @@
 import User from "../models/UserModel.js";
-// import argon2 from "argon2";
-import argon2 from "modules/argon2.js";
+import argon2 from "argon2";
+// import argon2 from "modules/argon2";
 
 export const Login = async(req, res) => {
     const user = await User.findOne({
@@ -9,7 +9,6 @@ export const Login = async(req, res) => {
         }
     });
     if (!user) return res.status(404).json({ msg: "User tidak ditemukan" });
-    console.log(argon2);
     const match = await argon2.verify(user.password, req.body.password);
     if (!match) return res.status(400).json({ msg: "Wrong Password" });
     req.session.userId = user.uuid;
