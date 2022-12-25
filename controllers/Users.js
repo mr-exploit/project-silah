@@ -1,6 +1,6 @@
 import User from "../models/UserModel.js";
 // import argon2 from "modulsargon2";
-import argon2 from "moduls/argon2";
+import argon2 from "modules/argon2";
 // const argon2 = require("argon2");
 
 export const getUsers = async (req, res) => {
