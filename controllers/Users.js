@@ -1,5 +1,5 @@
 import User from "../models/UserModel.js";
-import argon2 from "argon2";
+import {argon2} from "argon2";
 
 export const getUsers = async (req, res) => {
     try {
