@@ -19,14 +19,14 @@ export const Login = async(req, res) => {
 }
 
 export const Me = async(req, res) => {
-    // if (!req.session.userId) {
-    //     return res.status(401).json({ msg: "Mohon Login ke akun Anda!" });
-    // }
+    if (!req.session.userId) {
+        return res.status(401).json({ msg: "Mohon Login ke akun Anda!" });
+    }
     const user = await User.findOne({
         attributes: ['uuid', 'name', 'email', 'role'],
-        where: {
-            uuid: req.session.userId
-        }
+        // where: {
+        //     uuid: req.session.userId
+        // }
     });
     if (!user) return res.status(404).json({ msg: "User tidak ditemukan" });
     res.status(200).json(user);
