@@ -45,7 +45,7 @@ app.use(session({
 
 app.use(cors({
     credentials: true,
-    origin: "http://web.silah.website:3000"
+    origin: true
 }));
 
 app.use(express.json());
