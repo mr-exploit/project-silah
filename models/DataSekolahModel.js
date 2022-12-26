@@ -25,21 +25,21 @@ const DataSekolah = db.define('datasekolah', {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            notEmpty: true,
+            notEmpty: false,
         }
     },
     pengelolaan: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            notEmpty: true,
+            notEmpty: false,
         }
     },
     tingkatan: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            notEmpty: true, 
+            notEmpty: false, 
             len : true,
         }
     },
@@ -47,7 +47,7 @@ const DataSekolah = db.define('datasekolah', {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            notEmpty: true, 
+            notEmpty: false, 
             len : true,
         }
     },
@@ -55,21 +55,21 @@ const DataSekolah = db.define('datasekolah', {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            notEmpty: true
+            notEmpty: false
         }
     },
     nameKs: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            notEmpty: true, 
+            notEmpty: false, 
         }
     },
     userId: {
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
-            notEmpty: true
+            notEmpty: false
         }
     },
 }, {
