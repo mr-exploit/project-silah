@@ -51,23 +51,23 @@ const Kerusakan = db.define('kerusakan',{
     },
     image_2: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
-            notEmpty: false, 
+            notEmpty: true, 
         }
     },
     image_3: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
-            notEmpty: false, 
+            notEmpty: true, 
         }
     },
     image_4: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
-            notEmpty: false, 
+            notEmpty: true, 
         }
     },
     url_1: {
@@ -79,23 +79,23 @@ const Kerusakan = db.define('kerusakan',{
     },
     url_2: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
-            notEmpty: false, 
+            notEmpty: true, 
         }
     },
     url_3: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
-            notEmpty: false
+            notEmpty: true
         }
     },
     url_4: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
-            notEmpty: false, 
+            notEmpty: true, 
         }
     },
     userId: {
